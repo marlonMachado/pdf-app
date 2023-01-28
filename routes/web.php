@@ -14,7 +14,8 @@ use App\Http\Controllers\PdfController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return redirect()->action([PdfController::class, 'index']);
 });
 
 Route::get('index', [PdfController::class, 'index'])->name('index.index');
