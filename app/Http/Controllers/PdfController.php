@@ -32,7 +32,7 @@ class PdfController extends Controller
                 copy($file, $ruta);
                 //$this->store($request);
                 $this->store($nombre);
-            } else {
+            } else { 
 
                 session()->flash('status', 'No es un documento pdf');
                 return redirect()->route('index.index');
